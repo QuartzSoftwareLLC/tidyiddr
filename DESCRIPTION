@@ -9,11 +9,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-repo:
-  url:
-    home: https://github.com/quartzsoftwarellc/tidyiddr
-    source: https://github.com/quartzsoftwarellc/tidyiddr/HEAD
-    issue: https://github.com/quartzsoftwarellc/tidyiddr/issues
-    user: https://github.com/quartzsoftwarellc
 Imports: 
     vroom

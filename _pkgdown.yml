@@ -1,0 +1,9 @@
+url: https://quartzsoftwarellc.github.io/tidyiddr/
+template:
+  bootstrap: 5
+repo:
+  url:
+    home: https://github.com/quartzsoftwarellc/tidyiddr/
+    source: https://github.com/quartzsoftwarellc/tidyiddr/HEAD/
+    issue: https://github.com/quartzsoftwarellc/tidyiddr/issues/
+    user: https://github.com/quartzsoftwarellc/
