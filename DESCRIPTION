@@ -1,0 +1,11 @@
+Package: tidyiddr
+Title: Provides downloads of the IDDR Data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Jacob", "Clarke", , "jacobclarke718@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Provides downloads of the IDDR data
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
