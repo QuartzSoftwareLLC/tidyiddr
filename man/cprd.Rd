@@ -4,7 +4,7 @@
 \alias{cprd}
 \title{cprd}
 \usage{
-cprd()
+cprd(save = F)
 }
 \description{
 CPRD

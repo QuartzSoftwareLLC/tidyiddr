@@ -4,7 +4,7 @@
 \alias{outpatient.viral.surveillance}
 \title{outpatient.viral.surveillance}
 \usage{
-outpatient.viral.surveillance()
+outpatient.viral.surveillance(save = F)
 }
 \description{
 Outpatient Viral Surveillance

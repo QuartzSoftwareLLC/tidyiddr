@@ -4,7 +4,7 @@
 \alias{flu}
 \title{flu}
 \usage{
-flu()
+flu(save = F)
 }
 \description{
 Flu Vaccination Rates

@@ -4,7 +4,7 @@
 \alias{caserates.by.age}
 \title{caserates.by.age}
 \usage{
-caserates.by.age()
+caserates.by.age(save = F)
 }
 \description{
 COVID19 Caserates by Age Group

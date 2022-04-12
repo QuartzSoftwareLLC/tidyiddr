@@ -9,8 +9,11 @@
 #' data <- covid.by.county()
 #' 
 #' @export
-covid.by.county <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/covid-by-county.csv"))
+covid.by.county <- function(save = F) {
+    if (!exists("covid.by.county.memory")) {
+        covid.by.county.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/covid-by-county.csv")
+    }
+    covid.by.county.memory
 }
 
 #' outpatient.viral.surveillance
@@ -23,8 +26,11 @@ covid.by.county <- function() {
 #' data <- outpatient.viral.surveillance()
 #' 
 #' @export
-outpatient.viral.surveillance <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.zip"))
+outpatient.viral.surveillance <- function(save = F) {
+    if (!exists("outpatient.viral.surveillance.memory")) {
+        outpatient.viral.surveillance.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.zip")
+    }
+    outpatient.viral.surveillance.memory
 }
 
 #' flu.testing
@@ -37,8 +43,11 @@ outpatient.viral.surveillance <- function() {
 #' data <- flu.testing()
 #' 
 #' @export
-flu.testing <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/flu-testing.csv"))
+flu.testing <- function(save = F) {
+    if (!exists("flu.testing.memory")) {
+        flu.testing.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/flu-testing.csv")
+    }
+    flu.testing.memory
 }
 
 #' influenza.vaccine.effectiveness
@@ -51,8 +60,11 @@ flu.testing <- function() {
 #' data <- influenza.vaccine.effectiveness()
 #' 
 #' @export
-influenza.vaccine.effectiveness <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/influenza-vaccine-effectiveness.csv"))
+influenza.vaccine.effectiveness <- function(save = F) {
+    if (!exists("influenza.vaccine.effectiveness.memory")) {
+        influenza.vaccine.effectiveness.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/influenza-vaccine-effectiveness.csv")
+    }
+    influenza.vaccine.effectiveness.memory
 }
 
 #' influenza.burden
@@ -65,8 +77,11 @@ influenza.vaccine.effectiveness <- function() {
 #' data <- influenza.burden()
 #' 
 #' @export
-influenza.burden <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/influenza-burden.csv"))
+influenza.burden <- function(save = F) {
+    if (!exists("influenza.burden.memory")) {
+        influenza.burden.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/influenza-burden.csv")
+    }
+    influenza.burden.memory
 }
 
 #' test.burden
@@ -79,8 +94,11 @@ influenza.burden <- function() {
 #' data <- test.burden()
 #' 
 #' @export
-test.burden <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/test-burden.csv"))
+test.burden <- function(save = F) {
+    if (!exists("test.burden.memory")) {
+        test.burden.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/test-burden.csv")
+    }
+    test.burden.memory
 }
 
 #' misc
@@ -93,8 +111,11 @@ test.burden <- function() {
 #' data <- misc()
 #' 
 #' @export
-misc <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/misc.csv"))
+misc <- function(save = F) {
+    if (!exists("misc.memory")) {
+        misc.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/misc.csv")
+    }
+    misc.memory
 }
 
 #' flu
@@ -107,8 +128,11 @@ misc <- function() {
 #' data <- flu()
 #' 
 #' @export
-flu <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/flu.csv"))
+flu <- function(save = F) {
+    if (!exists("flu.memory")) {
+        flu.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/flu.csv")
+    }
+    flu.memory
 }
 
 #' cprd
@@ -121,8 +145,11 @@ flu <- function() {
 #' data <- cprd()
 #' 
 #' @export
-cprd <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/cprd.csv"))
+cprd <- function(save = F) {
+    if (!exists("cprd.memory")) {
+        cprd.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/cprd.csv")
+    }
+    cprd.memory
 }
 
 #' breakthrough
@@ -135,8 +162,11 @@ cprd <- function() {
 #' data <- breakthrough()
 #' 
 #' @export
-breakthrough <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/breakthrough.csv"))
+breakthrough <- function(save = F) {
+    if (!exists("breakthrough.memory")) {
+        breakthrough.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/breakthrough.csv")
+    }
+    breakthrough.memory
 }
 
 #' covariants
@@ -149,8 +179,11 @@ breakthrough <- function() {
 #' data <- covariants()
 #' 
 #' @export
-covariants <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/covariants.csv"))
+covariants <- function(save = F) {
+    if (!exists("covariants.memory")) {
+        covariants.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/covariants.csv")
+    }
+    covariants.memory
 }
 
 #' caserates.by.age
@@ -163,8 +196,11 @@ covariants <- function() {
 #' data <- caserates.by.age()
 #' 
 #' @export
-caserates.by.age <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv"))
+caserates.by.age <- function(save = F) {
+    if (!exists("caserates.by.age.memory")) {
+        caserates.by.age.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv")
+    }
+    caserates.by.age.memory
 }
 
 #' deathcounts.by.age
@@ -177,8 +213,11 @@ caserates.by.age <- function() {
 #' data <- deathcounts.by.age()
 #' 
 #' @export
-deathcounts.by.age <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/deathcounts-by-age.csv"))
+deathcounts.by.age <- function(save = F) {
+    if (!exists("deathcounts.by.age.memory")) {
+        deathcounts.by.age.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/deathcounts-by-age.csv")
+    }
+    deathcounts.by.age.memory
 }
 
 #' deathrates.by.age
@@ -191,8 +230,11 @@ deathcounts.by.age <- function() {
 #' data <- deathrates.by.age()
 #' 
 #' @export
-deathrates.by.age <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/deathrates-by-age.csv"))
+deathrates.by.age <- function(save = F) {
+    if (!exists("deathrates.by.age.memory")) {
+        deathrates.by.age.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/deathrates-by-age.csv")
+    }
+    deathrates.by.age.memory
 }
 
 #' hospitalizations.by.age
@@ -205,8 +247,11 @@ deathrates.by.age <- function() {
 #' data <- hospitalizations.by.age()
 #' 
 #' @export
-hospitalizations.by.age <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv"))
+hospitalizations.by.age <- function(save = F) {
+    if (!exists("hospitalizations.by.age.memory")) {
+        hospitalizations.by.age.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv")
+    }
+    hospitalizations.by.age.memory
 }
 
 #' who.influenza
@@ -219,6 +264,9 @@ hospitalizations.by.age <- function() {
 #' data <- who.influenza()
 #' 
 #' @export
-who.influenza <- function() {
-    read.csv(url("https://s3.amazonaws.com/quartzdata/who-influenza.csv"))
+who.influenza <- function(save = F) {
+    if (!exists("who.influenza.memory")) {
+        who.influenza.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/who-influenza.csv")
+    }
+    who.influenza.memory
 }

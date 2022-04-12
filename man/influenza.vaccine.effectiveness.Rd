@@ -4,7 +4,7 @@
 \alias{influenza.vaccine.effectiveness}
 \title{influenza.vaccine.effectiveness}
 \usage{
-influenza.vaccine.effectiveness()
+influenza.vaccine.effectiveness(save = F)
 }
 \description{
 Influenza Vaccine Effectiveness

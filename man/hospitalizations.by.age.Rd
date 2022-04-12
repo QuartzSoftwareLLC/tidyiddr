@@ -4,7 +4,7 @@
 \alias{hospitalizations.by.age}
 \title{hospitalizations.by.age}
 \usage{
-hospitalizations.by.age()
+hospitalizations.by.age(save = F)
 }
 \description{
 COVID19 Hospitalizations by Age Group

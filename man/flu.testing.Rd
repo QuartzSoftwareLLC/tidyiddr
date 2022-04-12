@@ -4,7 +4,7 @@
 \alias{flu.testing}
 \title{flu.testing}
 \usage{
-flu.testing()
+flu.testing(save = F)
 }
 \description{
 Flu Testing

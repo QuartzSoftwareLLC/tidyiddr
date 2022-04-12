@@ -17,6 +17,7 @@ get_sources <- function(data) {
 raw %>%
     mutate(
         name = gsub("-", ".", id),
+        memory = paste0(name, ".memory"),
         code = glue("
 
 #' {{name}}
@@ -29,10 +30,13 @@ raw %>%
 #' data <- {{name}}()
 #' 
 #' @export
-{{name}} <- function() {
-    read.csv(url(\"{{link}}\"))
+{{name}} <- function(save = F) {
+    if (!exists(\"{{memory}}\")) {
+        {{memory}} <<- vroom::vroom(\"{{link}}\")
+    }
+    {{memory}}
 }
-", .open = "{{", .close = "}}")) %>% 
+", .open = "{{", .close = "}}")) %>%
     select(code) %>%
     pull() %>%
     write("R/generated.R")

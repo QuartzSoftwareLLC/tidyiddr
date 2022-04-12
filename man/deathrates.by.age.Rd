@@ -4,7 +4,7 @@
 \alias{deathrates.by.age}
 \title{deathrates.by.age}
 \usage{
-deathrates.by.age()
+deathrates.by.age(save = F)
 }
 \description{
 COVID19 Death Rates by Age Group

@@ -4,7 +4,7 @@
 \alias{influenza.burden}
 \title{influenza.burden}
 \usage{
-influenza.burden()
+influenza.burden(save = F)
 }
 \description{
 Influenza Burden

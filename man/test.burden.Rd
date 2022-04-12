@@ -4,7 +4,7 @@
 \alias{test.burden}
 \title{test.burden}
 \usage{
-test.burden()
+test.burden(save = F)
 }
 \description{
 Test Burden

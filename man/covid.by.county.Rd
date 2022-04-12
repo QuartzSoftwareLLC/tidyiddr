@@ -4,7 +4,7 @@
 \alias{covid.by.county}
 \title{covid.by.county}
 \usage{
-covid.by.county()
+covid.by.county(save = F)
 }
 \description{
 COVID by County

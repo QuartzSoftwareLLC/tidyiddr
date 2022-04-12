@@ -4,7 +4,7 @@
 \alias{who.influenza}
 \title{who.influenza}
 \usage{
-who.influenza()
+who.influenza(save = F)
 }
 \description{
 WHO Influenza

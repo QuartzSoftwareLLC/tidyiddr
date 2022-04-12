@@ -4,7 +4,7 @@
 \alias{covariants}
 \title{covariants}
 \usage{
-covariants()
+covariants(save = F)
 }
 \description{
 COVID19 Covariants by State

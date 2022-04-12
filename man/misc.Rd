@@ -4,7 +4,7 @@
 \alias{misc}
 \title{misc}
 \usage{
-misc()
+misc(save = F)
 }
 \description{
 MISC Data
