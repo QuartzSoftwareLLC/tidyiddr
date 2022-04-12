@@ -9,7 +9,7 @@ caserates.by.age()
 \description{
 COVID19 Caserates by Age Group
 Weekly case rates of COVID 19 by age group as reported by the CDC
-More information available at https://epi.quartzsoftware.com/datasets/caserates-by-age
+More information available at the \href{https://epi.quartzsoftware.com/datasets/caserates-by-age}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- caserates.by.age()

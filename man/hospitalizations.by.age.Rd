@@ -9,7 +9,7 @@ hospitalizations.by.age()
 \description{
 COVID19 Hospitalizations by Age Group
 Weekly hospitalizations of COVID 19 by age group as reported by the CDC
-More information available at https://epi.quartzsoftware.com/datasets/hospitalizations-by-age
+More information available at the \href{https://epi.quartzsoftware.com/datasets/hospitalizations-by-age}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- hospitalizations.by.age()

@@ -9,7 +9,7 @@ who.influenza()
 \description{
 WHO Influenza
 All of the WHO's influenza data describing case counts by influenza subtype by country and year.
-More information available at https://epi.quartzsoftware.com/datasets/who-influenza
+More information available at the \href{https://epi.quartzsoftware.com/datasets/who-influenza}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- who.influenza()

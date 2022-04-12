@@ -9,7 +9,7 @@ flu()
 \description{
 Flu Vaccination Rates
 Flu vaccination rates stratified by race, county, and season.
-More information available at https://epi.quartzsoftware.com/datasets/flu
+More information available at the \href{https://epi.quartzsoftware.com/datasets/flu}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- flu()

@@ -9,7 +9,7 @@ deathrates.by.age()
 \description{
 COVID19 Death Rates by Age Group
 Weekly death rates of COVID 19 by age group as reported by the CDC
-More information available at https://epi.quartzsoftware.com/datasets/deathrates-by-age
+More information available at the \href{https://epi.quartzsoftware.com/datasets/deathrates-by-age}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- deathrates.by.age()

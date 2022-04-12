@@ -9,7 +9,7 @@ misc()
 \description{
 MISC Data
 Daily data on MISC cases vs COVID cases in the US.
-More information available at https://epi.quartzsoftware.com/datasets/misc
+More information available at the \href{https://epi.quartzsoftware.com/datasets/misc}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- misc()

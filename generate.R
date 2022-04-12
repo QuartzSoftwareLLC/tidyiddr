@@ -23,8 +23,8 @@ raw %>%
 #' 
 #' {{title}}
 #' {{description}}
-#' More information available at https://epi.quartzsoftware.com/datasets/{{id}}
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/{{id}})
+#' @md
 #' @examples
 #' data <- {{name}}()
 #' 

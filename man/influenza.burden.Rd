@@ -9,7 +9,7 @@ influenza.burden()
 \description{
 Influenza Burden
 Seasonal data since 2010 with multiple measures to compare influenza burden by season.
-More information available at https://epi.quartzsoftware.com/datasets/influenza-burden
+More information available at the \href{https://epi.quartzsoftware.com/datasets/influenza-burden}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- influenza.burden()

@@ -3,8 +3,8 @@
 #' 
 #' COVID by County
 #' US COVID 19 community levels by county as reported by the CDC
-#' More information available at https://epi.quartzsoftware.com/datasets/covid-by-county
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covid-by-county)
+#' @md
 #' @examples
 #' data <- covid.by.county()
 #' 
@@ -17,8 +17,8 @@ covid.by.county <- function() {
 #' 
 #' Outpatient Viral Surveillance
 #' National, Regional, and State Level Outpatient Illness and Viral Surveillance data pulled monthly from the cdc.
-#' More information available at https://epi.quartzsoftware.com/datasets/outpatient-viral-surveillance
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/outpatient-viral-surveillance)
+#' @md
 #' @examples
 #' data <- outpatient.viral.surveillance()
 #' 
@@ -31,8 +31,8 @@ outpatient.viral.surveillance <- function() {
 #' 
 #' Flu Testing
 #' Age Group Distribution of Influenza Positive Specimens Reported by Public Health Laboratories
-#' More information available at https://epi.quartzsoftware.com/datasets/flu-testing
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flu-testing)
+#' @md
 #' @examples
 #' data <- flu.testing()
 #' 
@@ -45,8 +45,8 @@ flu.testing <- function() {
 #' 
 #' Influenza Vaccine Effectiveness
 #' Seasonal data since 2010 with vaccine effectiveness by age group.
-#' More information available at https://epi.quartzsoftware.com/datasets/influenza-vaccine-effectiveness
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-vaccine-effectiveness)
+#' @md
 #' @examples
 #' data <- influenza.vaccine.effectiveness()
 #' 
@@ -59,8 +59,8 @@ influenza.vaccine.effectiveness <- function() {
 #' 
 #' Influenza Burden
 #' Seasonal data since 2010 with multiple measures to compare influenza burden by season.
-#' More information available at https://epi.quartzsoftware.com/datasets/influenza-burden
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-burden)
+#' @md
 #' @examples
 #' data <- influenza.burden()
 #' 
@@ -73,8 +73,8 @@ influenza.burden <- function() {
 #' 
 #' Test Burden
 #' Test burden data from the CDC.
-#' More information available at https://epi.quartzsoftware.com/datasets/test-burden
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/test-burden)
+#' @md
 #' @examples
 #' data <- test.burden()
 #' 
@@ -87,8 +87,8 @@ test.burden <- function() {
 #' 
 #' MISC Data
 #' Daily data on MISC cases vs COVID cases in the US.
-#' More information available at https://epi.quartzsoftware.com/datasets/misc
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/misc)
+#' @md
 #' @examples
 #' data <- misc()
 #' 
@@ -101,8 +101,8 @@ misc <- function() {
 #' 
 #' Flu Vaccination Rates
 #' Flu vaccination rates stratified by race, county, and season.
-#' More information available at https://epi.quartzsoftware.com/datasets/flu
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flu)
+#' @md
 #' @examples
 #' data <- flu()
 #' 
@@ -115,8 +115,8 @@ flu <- function() {
 #' 
 #' CPRD
 #' All protocols scraped from the cprd website
-#' More information available at https://epi.quartzsoftware.com/datasets/cprd
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/cprd)
+#' @md
 #' @examples
 #' data <- cprd()
 #' 
@@ -129,8 +129,8 @@ cprd <- function() {
 #' 
 #' Breakthrough by State
 #' Breakthrough data scraped from multiple states daily. Contains information on vaccinated vs unvaccinated hospitalizations and COVID cases.
-#' More information available at https://epi.quartzsoftware.com/datasets/breakthrough
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/breakthrough)
+#' @md
 #' @examples
 #' data <- breakthrough()
 #' 
@@ -143,8 +143,8 @@ breakthrough <- function() {
 #' 
 #' COVID19 Covariants by State
 #' CoVariants provides an overview of SARS-CoV-2 variants and mutations that are of interest. Here, you can find out what mutations define a variant, what impact they might have (with links to papers and resources), and where variants are found
-#' More information available at https://epi.quartzsoftware.com/datasets/covariants
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covariants)
+#' @md
 #' @examples
 #' data <- covariants()
 #' 
@@ -157,8 +157,8 @@ covariants <- function() {
 #' 
 #' COVID19 Caserates by Age Group
 #' Weekly case rates of COVID 19 by age group as reported by the CDC
-#' More information available at https://epi.quartzsoftware.com/datasets/caserates-by-age
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/caserates-by-age)
+#' @md
 #' @examples
 #' data <- caserates.by.age()
 #' 
@@ -171,8 +171,8 @@ caserates.by.age <- function() {
 #' 
 #' COVID19 Death Counts by Age Group
 #' This datasets is pulled daily from the CDC's data tracker for easier access. It provides weekly death counts secondary to COVID 19 stratified by age group.
-#' More information available at https://epi.quartzsoftware.com/datasets/deathcounts-by-age
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/deathcounts-by-age)
+#' @md
 #' @examples
 #' data <- deathcounts.by.age()
 #' 
@@ -185,8 +185,8 @@ deathcounts.by.age <- function() {
 #' 
 #' COVID19 Death Rates by Age Group
 #' Weekly death rates of COVID 19 by age group as reported by the CDC
-#' More information available at https://epi.quartzsoftware.com/datasets/deathrates-by-age
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/deathrates-by-age)
+#' @md
 #' @examples
 #' data <- deathrates.by.age()
 #' 
@@ -199,8 +199,8 @@ deathrates.by.age <- function() {
 #' 
 #' COVID19 Hospitalizations by Age Group
 #' Weekly hospitalizations of COVID 19 by age group as reported by the CDC
-#' More information available at https://epi.quartzsoftware.com/datasets/hospitalizations-by-age
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/hospitalizations-by-age)
+#' @md
 #' @examples
 #' data <- hospitalizations.by.age()
 #' 
@@ -213,8 +213,8 @@ hospitalizations.by.age <- function() {
 #' 
 #' WHO Influenza
 #' All of the WHO's influenza data describing case counts by influenza subtype by country and year.
-#' More information available at https://epi.quartzsoftware.com/datasets/who-influenza
-#' 
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/who-influenza)
+#' @md
 #' @examples
 #' data <- who.influenza()
 #' 

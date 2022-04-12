@@ -9,7 +9,7 @@ flu.testing()
 \description{
 Flu Testing
 Age Group Distribution of Influenza Positive Specimens Reported by Public Health Laboratories
-More information available at https://epi.quartzsoftware.com/datasets/flu-testing
+More information available at the \href{https://epi.quartzsoftware.com/datasets/flu-testing}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- flu.testing()

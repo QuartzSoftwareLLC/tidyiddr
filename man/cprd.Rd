@@ -9,7 +9,7 @@ cprd()
 \description{
 CPRD
 All protocols scraped from the cprd website
-More information available at https://epi.quartzsoftware.com/datasets/cprd
+More information available at the \href{https://epi.quartzsoftware.com/datasets/cprd}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- cprd()

@@ -9,7 +9,7 @@ breakthrough()
 \description{
 Breakthrough by State
 Breakthrough data scraped from multiple states daily. Contains information on vaccinated vs unvaccinated hospitalizations and COVID cases.
-More information available at https://epi.quartzsoftware.com/datasets/breakthrough
+More information available at the \href{https://epi.quartzsoftware.com/datasets/breakthrough}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- breakthrough()

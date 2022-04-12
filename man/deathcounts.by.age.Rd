@@ -9,7 +9,7 @@ deathcounts.by.age()
 \description{
 COVID19 Death Counts by Age Group
 This datasets is pulled daily from the CDC's data tracker for easier access. It provides weekly death counts secondary to COVID 19 stratified by age group.
-More information available at https://epi.quartzsoftware.com/datasets/deathcounts-by-age
+More information available at the \href{https://epi.quartzsoftware.com/datasets/deathcounts-by-age}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- deathcounts.by.age()

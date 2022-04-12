@@ -9,7 +9,7 @@ test.burden()
 \description{
 Test Burden
 Test burden data from the CDC.
-More information available at https://epi.quartzsoftware.com/datasets/test-burden
+More information available at the \href{https://epi.quartzsoftware.com/datasets/test-burden}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- test.burden()

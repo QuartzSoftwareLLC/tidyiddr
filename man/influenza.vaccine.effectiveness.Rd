@@ -9,7 +9,7 @@ influenza.vaccine.effectiveness()
 \description{
 Influenza Vaccine Effectiveness
 Seasonal data since 2010 with vaccine effectiveness by age group.
-More information available at https://epi.quartzsoftware.com/datasets/influenza-vaccine-effectiveness
+More information available at the \href{https://epi.quartzsoftware.com/datasets/influenza-vaccine-effectiveness}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- influenza.vaccine.effectiveness()

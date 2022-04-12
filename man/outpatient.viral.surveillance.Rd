@@ -9,7 +9,7 @@ outpatient.viral.surveillance()
 \description{
 Outpatient Viral Surveillance
 National, Regional, and State Level Outpatient Illness and Viral Surveillance data pulled monthly from the cdc.
-More information available at https://epi.quartzsoftware.com/datasets/outpatient-viral-surveillance
+More information available at the \href{https://epi.quartzsoftware.com/datasets/outpatient-viral-surveillance}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- outpatient.viral.surveillance()

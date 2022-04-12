@@ -9,7 +9,7 @@ covid.by.county()
 \description{
 COVID by County
 US COVID 19 community levels by county as reported by the CDC
-More information available at https://epi.quartzsoftware.com/datasets/covid-by-county
+More information available at the \href{https://epi.quartzsoftware.com/datasets/covid-by-county}{Quartz Software Infection Disease Data Repository}
 }
 \examples{
 data <- covid.by.county()
