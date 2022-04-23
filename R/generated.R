@@ -67,6 +67,23 @@ influenza.vaccine.effectiveness <- function(save = F) {
     influenza.vaccine.effectiveness.memory
 }
 
+#' influenza.prevention
+#' 
+#' Influenza Prevention
+#' Influenza prevention data from CDC's Influenza Prevention and Surveillance Program.
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-prevention)
+#' @md
+#' @examples
+#' data <- influenza.prevention()
+#' 
+#' @export
+influenza.prevention <- function(save = F) {
+    if (!exists("influenza.prevention.memory")) {
+        influenza.prevention.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/influenza-prevention.csv")
+    }
+    influenza.prevention.memory
+}
+
 #' influenza.burden
 #' 
 #' Influenza Burden
