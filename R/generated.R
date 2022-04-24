@@ -1,4 +1,21 @@
 
+#' syndromic.trends
+#' 
+#' Syndromic Trends
+#' Trends of different infectious pathogens in the US over time.
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/syndromic-trends)
+#' @md
+#' @examples
+#' data <- syndromic.trends()
+#' 
+#' @export
+syndromic.trends <- function(save = F) {
+    if (!exists("syndromic.trends.memory")) {
+        syndromic.trends.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/syndromic-trends.csv")
+    }
+    syndromic.trends.memory
+}
+
 #' covid.by.county
 #' 
 #' COVID by County
