@@ -1,8 +1,8 @@
 pandoc: 2.7.3
-pkgdown: 2.0.2
+pkgdown: 2.0.3
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-04-24T14:26Z
+last_built: 2022-04-26T13:12Z
 urls:
   reference: https://quartzsoftwarellc.github.io/tidyiddr/reference
   article: https://quartzsoftwarellc.github.io/tidyiddr/articles
