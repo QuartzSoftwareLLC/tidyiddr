@@ -3,6 +3,7 @@
 export(breakthrough)
 export(caserates.by.age)
 export(covariants)
+export(covariants.country)
 export(covid.by.county)
 export(cprd)
 export(deathcounts.by.age)

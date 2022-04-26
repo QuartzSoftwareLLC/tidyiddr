@@ -220,6 +220,23 @@ covariants <- function(save = F) {
     covariants.memory
 }
 
+#' covariants.country
+#' 
+#' COVID19 Covariants by Country
+#' CoVariants provides an overview of SARS-CoV-2 variants and mutations that are of interest. Here, you can find out what mutations define a variant, what impact they might have (with links to papers and resources), and where variants are found
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covariants-country)
+#' @md
+#' @examples
+#' data <- covariants.country()
+#' 
+#' @export
+covariants.country <- function(save = F) {
+    if (!exists("covariants.country.memory")) {
+        covariants.country.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/covariants-country.csv")
+    }
+    covariants.country.memory
+}
+
 #' caserates.by.age
 #' 
 #' COVID19 Caserates by Age Group
