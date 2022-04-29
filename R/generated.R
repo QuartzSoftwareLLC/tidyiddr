@@ -45,7 +45,7 @@ covid.by.county <- function(save = F) {
 #' @export
 outpatient.viral.surveillance <- function(save = F) {
     if (!exists("outpatient.viral.surveillance.memory")) {
-        outpatient.viral.surveillance.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.zip")
+        outpatient.viral.surveillance.memory <<- vroom::vroom("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.csv")
     }
     outpatient.viral.surveillance.memory
 }
