@@ -54,22 +54,33 @@ More information available at the <a href="https://epi.quartzsoftware.com/datase
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">influenza.vaccine.effectiveness</span><span class="op">(</span>save <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">influenza.vaccine.effectiveness</span><span class="op">(</span>
+  use_memory <span class="op">=</span> <span class="cn">T</span>,
+  use_disk <span class="op">=</span> <span class="cn">T</span>,
+  bust_cache <span class="op">=</span> <span class="cn">F</span>,
+  <span class="va">...</span>
+<span class="op">)</span></code></pre></div>
     </div>
 
+    <div class="section level2">
+    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
+    <dl><dt>use_memory</dt>
+<dd><p>Whether to use memory caching.</p></dd>
+<dt>use_disk</dt>
+<dd><p>Whether to use disk caching.</p></dd>
+<dt>bust_cache</dt>
+<dd><p>Whether to bust (refresh) the cache.</p></dd>
+</dl></div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>This function uses the cache_download function to download the data from the repository.</p>
+    </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">influenza.vaccine.effectiveness</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">183</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">13</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Delimiter:</span> ","</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">chr</span> (6): age_group, adjusted_ve_percent, season, caption, vaccine_type, strain</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">dbl</span> (6): influenza_positive_total, influenza_positive_percent_vaccinated, in...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">lgl</span> (1): pediatric</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] " influenza.vaccine.effectiveness is deprecated. Please use influenza_vaccine_effectiveness instead"</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘janitor’</span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>

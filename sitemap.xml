@@ -25,13 +25,22 @@
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/caserates.by.age.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/caserates_by_age.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/covariants.country.html</loc>
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/covariants.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/covariants_country.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/covid.by.county.html</loc>
+  </url>
+  <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/covid_by_county.html</loc>
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/cprd.html</loc>
@@ -40,7 +49,13 @@
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/deathcounts.by.age.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/deathcounts_by_age.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/deathrates.by.age.html</loc>
+  </url>
+  <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/deathrates_by_age.html</loc>
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/flu.html</loc>
@@ -49,7 +64,13 @@
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/flu.testing.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/flu_testing.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/hospitalizations.by.age.html</loc>
+  </url>
+  <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/hospitalizations_by_age.html</loc>
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/index.html</loc>
@@ -64,18 +85,39 @@
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/influenza.vaccine.effectiveness.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/influenza_burden.html</loc>
+  </url>
+  <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/influenza_prevention.html</loc>
+  </url>
+  <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/influenza_vaccine_effectiveness.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/misc.html</loc>
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/outpatient.viral.surveillance.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/outpatient_viral_surveillance.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/syndromic.trends.html</loc>
+  </url>
+  <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/syndromic_trends.html</loc>
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/test.burden.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/test_burden.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/who.influenza.html</loc>
+  </url>
+  <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/who_influenza.html</loc>
   </url>
 </urlset>
