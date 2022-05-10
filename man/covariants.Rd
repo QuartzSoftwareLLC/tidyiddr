@@ -4,14 +4,34 @@
 \alias{covariants}
 \title{covariants}
 \usage{
-covariants(save = F)
+covariants(use_memory = T, use_disk = T, bust_cache = F, ...)
+
+covariants(use_memory = T, use_disk = T, bust_cache = F, ...)
+}
+\arguments{
+\item{use_memory}{Whether to use memory caching.}
+
+\item{use_disk}{Whether to use disk caching.}
+
+\item{bust_cache}{Whether to bust (refresh) the cache.}
 }
 \description{
 COVID19 Covariants by State
 CoVariants provides an overview of SARS-CoV-2 variants and mutations that are of interest. Here, you can find out what mutations define a variant, what impact they might have (with links to papers and resources), and where variants are found
 More information available at the \href{https://epi.quartzsoftware.com/datasets/covariants}{Quartz Software Infection Disease Data Repository}
+
+COVID19 Covariants by State
+CoVariants provides an overview of SARS-CoV-2 variants and mutations that are of interest. Here, you can find out what mutations define a variant, what impact they might have (with links to papers and resources), and where variants are found
+More information available at the \href{https://epi.quartzsoftware.com/datasets/covariants}{Quartz Software Infection Disease Data Repository}
+}
+\details{
+This function uses the cache_download function to download the data from the repository.
+
+This function uses the cache_download function to download the data from the repository.
 }
 \examples{
+data <- covariants()
+
 data <- covariants()
 
 }

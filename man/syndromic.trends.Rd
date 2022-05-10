@@ -4,12 +4,22 @@
 \alias{syndromic.trends}
 \title{syndromic.trends}
 \usage{
-syndromic.trends(save = F)
+syndromic.trends(use_memory = T, use_disk = T, bust_cache = F, ...)
+}
+\arguments{
+\item{use_memory}{Whether to use memory caching.}
+
+\item{use_disk}{Whether to use disk caching.}
+
+\item{bust_cache}{Whether to bust (refresh) the cache.}
 }
 \description{
 Syndromic Trends
 Trends of different infectious pathogens in the US over time.
 More information available at the \href{https://epi.quartzsoftware.com/datasets/syndromic-trends}{Quartz Software Infection Disease Data Repository}
+}
+\details{
+This function uses the cache_download function to download the data from the repository.
 }
 \examples{
 data <- syndromic.trends()

@@ -4,12 +4,22 @@
 \alias{test.burden}
 \title{test.burden}
 \usage{
-test.burden(save = F)
+test.burden(use_memory = T, use_disk = T, bust_cache = F, ...)
+}
+\arguments{
+\item{use_memory}{Whether to use memory caching.}
+
+\item{use_disk}{Whether to use disk caching.}
+
+\item{bust_cache}{Whether to bust (refresh) the cache.}
 }
 \description{
 Test Burden
 Test burden data from the CDC.
 More information available at the \href{https://epi.quartzsoftware.com/datasets/test-burden}{Quartz Software Infection Disease Data Repository}
+}
+\details{
+This function uses the cache_download function to download the data from the repository.
 }
 \examples{
 data <- test.burden()

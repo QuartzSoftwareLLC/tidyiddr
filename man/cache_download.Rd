@@ -4,8 +4,29 @@
 \alias{cache_download}
 \title{Cache Download}
 \usage{
-cache_download(url)
+cache_download(
+  url,
+  ...,
+  use_memory = TRUE,
+  use_disk = TRUE,
+  bust_cache = FALSE
+)
+}
+\arguments{
+\item{url}{The URL to download from.}
+
+\item{use_memory}{Whether to use memory caching.}
+
+\item{use_disk}{Whether to use disk caching.}
+
+\item{bust_cache}{Whether to bust (refresh) the cache.}
 }
 \description{
 Cache Download
+}
+\examples{
+cache_download("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv")
+
+options("tidyiddr_use_cache" = TRUE)
+cache_download("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv")
 }

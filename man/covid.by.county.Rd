@@ -4,12 +4,22 @@
 \alias{covid.by.county}
 \title{covid.by.county}
 \usage{
-covid.by.county(save = F)
+covid.by.county(use_memory = T, use_disk = T, bust_cache = F, ...)
+}
+\arguments{
+\item{use_memory}{Whether to use memory caching.}
+
+\item{use_disk}{Whether to use disk caching.}
+
+\item{bust_cache}{Whether to bust (refresh) the cache.}
 }
 \description{
 COVID by County
 US COVID 19 community levels by county as reported by the CDC
 More information available at the \href{https://epi.quartzsoftware.com/datasets/covid-by-county}{Quartz Software Infection Disease Data Repository}
+}
+\details{
+This function uses the cache_download function to download the data from the repository.
 }
 \examples{
 data <- covid.by.county()
