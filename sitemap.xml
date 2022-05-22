@@ -67,6 +67,9 @@
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/flu_testing.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/flunet.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/hospitalizations.by.age.html</loc>
   </url>
   <url>
@@ -113,11 +116,5 @@
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/test_burden.html</loc>
-  </url>
-  <url>
-    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/who.influenza.html</loc>
-  </url>
-  <url>
-    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/who_influenza.html</loc>
   </url>
 </urlset>
