@@ -359,24 +359,24 @@ hospitalizations.by.age <- function(use_memory = T, use_disk = T, bust_cache = F
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
 
-#' who.influenza
+#' flunet
 #'
 #' WHO Influenza
 #' All of the WHO's influenza data describing case counts by influenza subtype by country and year.
-#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/who-influenza)
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flunet)
 #'
 #' This function uses the cache_download function to download the data from the repository.
 #' @md
 #' @examples
-#' data <- who.influenza()
+#' data <- flunet()
 #'
 #' @export
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
-who.influenza <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
-  print(" who.influenza is deprecated. Please use who_influenza instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/who-influenza.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+flunet <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+  
+    cache_download("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
 
 #' syndromic_trends
@@ -739,22 +739,22 @@ hospitalizations_by_age <- function(use_memory = T, use_disk = T, bust_cache = F
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
 
-#' who_influenza
+#' flunet
 #'
 #' WHO Influenza
 #' All of the WHO's influenza data describing case counts by influenza subtype by country and year.
-#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/who-influenza)
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flunet)
 #'
 #' This function uses the cache_download function to download the data from the repository.
 #' @md
 #' @examples
-#' data <- who_influenza()
+#' data <- flunet()
 #'
 #' @export
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
-who_influenza <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+flunet <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/who-influenza.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+    cache_download("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
