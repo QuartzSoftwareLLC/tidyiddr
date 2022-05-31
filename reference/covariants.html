@@ -76,6 +76,8 @@ More information available at the <a href="https://epi.quartzsoftware.com/datase
 <dd><p>Whether to use disk caching.</p></dd>
 <dt>bust_cache</dt>
 <dd><p>Whether to bust (refresh) the cache.</p></dd>
+<dt>...</dt>
+<dd><p>arguments to forward to the cache_download function.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -89,11 +91,11 @@ More information available at the <a href="https://epi.quartzsoftware.com/datase
 <span class="r-in"></span>
 <span class="r-in"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">covariants</span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Reading from disk cache"</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">2810</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">34</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">2869</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">34</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Delimiter:</span> ","</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">chr</span>   (1): state</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">dbl</span>  (32): 21J (Delta), 21K (Omicron), 21L (Omicron), 20B/S:732A, 20G/S:677H...</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">dbl</span>  (32): 21J (Delta), 21K (Omicron), 21L (Omicron), 22C (Omicron), 20B/S:7...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB;">date</span>  (1): week</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span>
@@ -106,7 +108,7 @@ More information available at the <a href="https://epi.quartzsoftware.com/datase
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Jacob Clarke.</p>
+  <p></p><p>Developed by Jacob Clarke, Timothy Wiemken.</p>
 </div>
 
 <div class="pkgdown-footer-right">

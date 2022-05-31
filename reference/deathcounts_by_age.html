@@ -65,6 +65,8 @@ More information available at the <a href="https://epi.quartzsoftware.com/datase
 <dd><p>Whether to use disk caching.</p></dd>
 <dt>bust_cache</dt>
 <dd><p>Whether to bust (refresh) the cache.</p></dd>
+<dt>...</dt>
+<dd><p>arguments to forward to the cache_download function.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -75,10 +77,10 @@ More information available at the <a href="https://epi.quartzsoftware.com/datase
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">deathcounts_by_age</span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Reading from disk cache"</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">113</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">13</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">125</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">23</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Delimiter:</span> ","</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">dbl</span>  (12): 1-4 Years, 15-24 Years, 25-34 Years, 35-44 Years, 45-54 Years, 5-...</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">dbl</span>  (22): 0 - 4, 5 - 11, 12 - 15, 16 - 17, 18 - 29, 30 - 39, 40 - 49, 50 - ...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB;">date</span>  (1): week</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span>
@@ -91,7 +93,7 @@ More information available at the <a href="https://epi.quartzsoftware.com/datase
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Jacob Clarke.</p>
+  <p></p><p>Developed by Jacob Clarke, Timothy Wiemken.</p>
 </div>
 
 <div class="pkgdown-footer-right">
