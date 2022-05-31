@@ -12,7 +12,10 @@ RoxygenNote: 7.2.0
 Imports: 
     rappdirs,
     janitor,
-    vroom
+    vroom,
+    withr,
+    fs,
+    dplyr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
