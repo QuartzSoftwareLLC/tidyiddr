@@ -37,13 +37,13 @@ test_that("cache busting works", {
   a <- data.frame(a = 1, b = 3, c = 5)
   write.csv(a, url, row.names = FALSE)
   aread <- cache_download(url)
-  b <- data.frame(b = 2, a = 1, c = 3)
-  write.csv(b, url, row.names = FALSE)
-  aread <- cache_download(url)
-  bread <- cache_download(url, bust_cache = T)
   aread %>%
     as.data.frame() %>%
     expect_equal(a)
+  b <- data.frame(b = 2, a = 1, c = 3)
+  write.csv(b, url, row.names = FALSE)
+  bread <- cache_download(url, bust_cache = T)
+
   bread %>%
     as.data.frame() %>%
     expect_equal(b)

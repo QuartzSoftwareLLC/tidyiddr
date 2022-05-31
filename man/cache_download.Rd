@@ -15,6 +15,8 @@ cache_download(
 \arguments{
 \item{url}{The URL to download from.}
 
+\item{...}{arguments to forward to the vroom::vroom function.}
+
 \item{use_memory}{Whether to use memory caching.}
 
 \item{use_disk}{Whether to use disk caching.}

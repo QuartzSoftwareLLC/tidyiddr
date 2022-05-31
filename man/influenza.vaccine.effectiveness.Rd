@@ -17,6 +17,8 @@ influenza.vaccine.effectiveness(
 \item{use_disk}{Whether to use disk caching.}
 
 \item{bust_cache}{Whether to bust (refresh) the cache.}
+
+\item{...}{arguments to forward to the cache_download function.}
 }
 \description{
 Influenza Vaccine Effectiveness

@@ -39,6 +39,7 @@ raw %>%
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 {{name}} <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   {{ifelse(grepl('\\\\.', name),
         paste('print(\"', name, 'is deprecated. Please use', gsub('\\\\.', '_', name), 'instead\")' ),

@@ -12,6 +12,8 @@ deathcounts.by.age(use_memory = T, use_disk = T, bust_cache = F, ...)
 \item{use_disk}{Whether to use disk caching.}
 
 \item{bust_cache}{Whether to bust (refresh) the cache.}
+
+\item{...}{arguments to forward to the cache_download function.}
 }
 \description{
 COVID19 Death Counts by Age Group

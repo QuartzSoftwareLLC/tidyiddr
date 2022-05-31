@@ -14,6 +14,7 @@
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 syndromic.trends <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" syndromic.trends is deprecated. Please use syndromic_trends instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/syndromic-trends.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -34,6 +35,7 @@ syndromic.trends <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 covid.by.county <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" covid.by.county is deprecated. Please use covid_by_county instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/covid-by-county.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -54,6 +56,7 @@ covid.by.county <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 outpatient.viral.surveillance <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" outpatient.viral.surveillance is deprecated. Please use outpatient_viral_surveillance instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -74,6 +77,7 @@ outpatient.viral.surveillance <- function(use_memory = T, use_disk = T, bust_cac
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 flu.testing <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" flu.testing is deprecated. Please use flu_testing instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu-testing.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -94,6 +98,7 @@ flu.testing <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 influenza.vaccine.effectiveness <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" influenza.vaccine.effectiveness is deprecated. Please use influenza_vaccine_effectiveness instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-vaccine-effectiveness.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -114,6 +119,7 @@ influenza.vaccine.effectiveness <- function(use_memory = T, use_disk = T, bust_c
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 influenza.prevention <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" influenza.prevention is deprecated. Please use influenza_prevention instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-prevention.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -134,6 +140,7 @@ influenza.prevention <- function(use_memory = T, use_disk = T, bust_cache = F, .
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 influenza.burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" influenza.burden is deprecated. Please use influenza_burden instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-burden.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -154,6 +161,7 @@ influenza.burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 test.burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" test.burden is deprecated. Please use test_burden instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/test-burden.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -174,6 +182,7 @@ test.burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/misc.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -194,6 +203,7 @@ misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -214,6 +224,7 @@ flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 cprd <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/cprd.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -234,6 +245,7 @@ cprd <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 breakthrough <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/breakthrough.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -254,6 +266,7 @@ breakthrough <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 covariants <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/covariants.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -274,6 +287,7 @@ covariants <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 covariants.country <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" covariants.country is deprecated. Please use covariants_country instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/covariants-country.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -294,6 +308,7 @@ covariants.country <- function(use_memory = T, use_disk = T, bust_cache = F, ...
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 caserates.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" caserates.by.age is deprecated. Please use caserates_by_age instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -314,6 +329,7 @@ caserates.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 deathcounts.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" deathcounts.by.age is deprecated. Please use deathcounts_by_age instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/deathcounts-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -334,6 +350,7 @@ deathcounts.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 deathrates.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" deathrates.by.age is deprecated. Please use deathrates_by_age instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/deathrates-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -354,6 +371,7 @@ deathrates.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...)
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 hospitalizations.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   print(" hospitalizations.by.age is deprecated. Please use hospitalizations_by_age instead")
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -374,6 +392,7 @@ hospitalizations.by.age <- function(use_memory = T, use_disk = T, bust_cache = F
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 flunet <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -394,6 +413,7 @@ flunet <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 syndromic_trends <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/syndromic-trends.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -414,6 +434,7 @@ syndromic_trends <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 covid_by_county <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/covid-by-county.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -434,6 +455,7 @@ covid_by_county <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 outpatient_viral_surveillance <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -454,6 +476,7 @@ outpatient_viral_surveillance <- function(use_memory = T, use_disk = T, bust_cac
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 flu_testing <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu-testing.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -474,6 +497,7 @@ flu_testing <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 influenza_vaccine_effectiveness <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-vaccine-effectiveness.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -494,6 +518,7 @@ influenza_vaccine_effectiveness <- function(use_memory = T, use_disk = T, bust_c
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 influenza_prevention <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-prevention.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -514,6 +539,7 @@ influenza_prevention <- function(use_memory = T, use_disk = T, bust_cache = F, .
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 influenza_burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-burden.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -534,6 +560,7 @@ influenza_burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 test_burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/test-burden.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -554,6 +581,7 @@ test_burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/misc.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -574,6 +602,7 @@ misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -594,6 +623,7 @@ flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 cprd <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/cprd.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -614,6 +644,7 @@ cprd <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 breakthrough <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/breakthrough.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -634,6 +665,7 @@ breakthrough <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 covariants <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/covariants.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -654,6 +686,7 @@ covariants <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 covariants_country <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/covariants-country.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -674,6 +707,7 @@ covariants_country <- function(use_memory = T, use_disk = T, bust_cache = F, ...
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 caserates_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -694,6 +728,7 @@ caserates_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 deathcounts_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/deathcounts-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -714,6 +749,7 @@ deathcounts_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 deathrates_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/deathrates-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -734,6 +770,7 @@ deathrates_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...)
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 hospitalizations_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
@@ -754,6 +791,7 @@ hospitalizations_by_age <- function(use_memory = T, use_disk = T, bust_cache = F
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the cache_download function.
 flunet <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)

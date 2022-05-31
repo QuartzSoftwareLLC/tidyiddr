@@ -10,6 +10,7 @@
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
+#' @param ... arguments to forward to the vroom::vroom function.
 cache_download <- function(url, ..., use_memory = TRUE, use_disk = TRUE, bust_cache = FALSE) {
   use_disk <- getOption("tidyiddr_use_cache", use_disk)
   cache_dir <- getOption("tidyiddr_cache_dir", rappdirs::user_cache_dir("tidyiddr"))
@@ -29,7 +30,7 @@ cache_download <- function(url, ..., use_memory = TRUE, use_disk = TRUE, bust_ca
     } else {
       download_data()
 
-      write.csv(get(memory), path, row.names = FALSE)
+      utils::write.csv(get(memory), path, row.names = FALSE)
     }
   }
 
