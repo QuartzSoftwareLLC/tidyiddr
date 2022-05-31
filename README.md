@@ -2,6 +2,10 @@
 
 # tidyiddr
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/QuartzSoftwareLLC/tidyiddr/workflows/R-CMD-check/badge.svg)](https://github.com/QuartzSoftwareLLC/tidyiddr/actions)
+<!-- badges: end -->
+
 Every epidimiological question relies on data. The Infectious Disease Repository provides a location for data and analytical resources for various infectious etiologies. The website is developed and maintained by Jacob Clarke at Quartz Software LLC.
 
 ## Installation 
