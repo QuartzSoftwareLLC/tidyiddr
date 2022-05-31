@@ -1,6 +1,6 @@
 Package: tidyiddr
 Title: Provides downloads of the IDDR Data
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     c(person("Jacob", "Clarke", , "jacobclarke718@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7221-6244")), person("Timothy", "Wiemken", role = c("aut")))
