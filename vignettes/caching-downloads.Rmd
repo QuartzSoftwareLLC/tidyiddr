@@ -1,0 +1,24 @@
+---
+title: "Caching Downloads"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{caching-downloads}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tidyiddr)
+```
+
+When downloading data from the internet, it is often useful to cache the data so that you do not have to download it again each time you run your script.
+Normally, this has to be done manually by saving your file to a local downloads directory.
+`tidyiddr` has built in support for cache mangement.
+All downloads in `tidyiddr` are built on top of the `cache_download()` function.

@@ -17,7 +17,10 @@ Imports:
     fs,
     dplyr
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://github.com/QuartzSoftwareLLC/tidyiddr
 BugReports: https://github.com/QuartzSoftwareLLC/tidyiddr/issues
+VignetteBuilder: knitr
