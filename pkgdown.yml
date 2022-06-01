@@ -1,8 +1,9 @@
 pandoc: 2.7.3
 pkgdown: 2.0.3
 pkgdown_sha: ~
-articles: {}
-last_built: 2022-05-31T07:15Z
+articles:
+  caching-downloads: caching-downloads.html
+last_built: 2022-06-01T16:02Z
 urls:
   reference: https://quartzsoftwarellc.github.io/tidyiddr/reference
   article: https://quartzsoftwarellc.github.io/tidyiddr/articles
