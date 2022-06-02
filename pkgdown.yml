@@ -3,7 +3,7 @@ pkgdown: 2.0.3
 pkgdown_sha: ~
 articles:
   caching-downloads: caching-downloads.html
-last_built: 2022-06-02T17:54Z
+last_built: 2022-06-02T21:28Z
 urls:
   reference: https://quartzsoftwarellc.github.io/tidyiddr/reference
   article: https://quartzsoftwarellc.github.io/tidyiddr/articles
