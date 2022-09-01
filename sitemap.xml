@@ -49,9 +49,6 @@
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/covid_by_county.html</loc>
   </url>
   <url>
-    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/cprd.html</loc>
-  </url>
-  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/deathcounts.by.age.html</loc>
   </url>
   <url>
@@ -106,16 +103,13 @@
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/misc.html</loc>
   </url>
   <url>
+    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/nervss.html</loc>
+  </url>
+  <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/outpatient.viral.surveillance.html</loc>
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/outpatient_viral_surveillance.html</loc>
-  </url>
-  <url>
-    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/syndromic.trends.html</loc>
-  </url>
-  <url>
-    <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/syndromic_trends.html</loc>
   </url>
   <url>
     <loc>https://quartzsoftwarellc.github.io/tidyiddr/reference/test.burden.html</loc>
