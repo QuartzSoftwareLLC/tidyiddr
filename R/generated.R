@@ -1,23 +1,23 @@
 
-#' syndromic.trends
+#' nervss
 #'
-#' Syndromic Trends
-#' Trends of different infectious pathogens in the US over time.
-#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/syndromic-trends)
+#' NERVSS
+#' NERVSS respiratory pathogen testing information
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/nervss)
 #'
 #' This function uses the cache_download function to download the data from the repository.
 #' @md
 #' @examples
-#' data <- syndromic.trends()
+#' data <- nervss()
 #'
 #' @export
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
 #' @param ... arguments to forward to the cache_download function.
-syndromic.trends <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
-  print(" syndromic.trends is deprecated. Please use syndromic_trends instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/syndromic-trends.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+nervss <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+  
+    cache_download("https://s3.amazonaws.com/quartzdata/datasets/nervss.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
 
 #' covid.by.county
@@ -209,27 +209,6 @@ flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
 
-#' cprd
-#'
-#' CPRD
-#' All protocols scraped from the cprd website
-#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/cprd)
-#'
-#' This function uses the cache_download function to download the data from the repository.
-#' @md
-#' @examples
-#' data <- cprd()
-#'
-#' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-cprd <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
-  
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/cprd.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
-}
-
 #' breakthrough
 #'
 #' Breakthrough by State
@@ -398,25 +377,25 @@ flunet <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
 
-#' syndromic_trends
+#' nervss
 #'
-#' Syndromic Trends
-#' Trends of different infectious pathogens in the US over time.
-#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/syndromic-trends)
+#' NERVSS
+#' NERVSS respiratory pathogen testing information
+#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/nervss)
 #'
 #' This function uses the cache_download function to download the data from the repository.
 #' @md
 #' @examples
-#' data <- syndromic_trends()
+#' data <- nervss()
 #'
 #' @export
 #' @param use_memory Whether to use memory caching.
 #' @param use_disk Whether to use disk caching.
 #' @param bust_cache Whether to bust (refresh) the cache.
 #' @param ... arguments to forward to the cache_download function.
-syndromic_trends <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+nervss <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/syndromic-trends.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+    cache_download("https://s3.amazonaws.com/quartzdata/datasets/nervss.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
 
 #' covid_by_county
@@ -606,27 +585,6 @@ misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
   
     cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
-}
-
-#' cprd
-#'
-#' CPRD
-#' All protocols scraped from the cprd website
-#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/cprd)
-#'
-#' This function uses the cache_download function to download the data from the repository.
-#' @md
-#' @examples
-#' data <- cprd()
-#'
-#' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-cprd <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
-  
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/cprd.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
 }
 
 #' breakthrough
