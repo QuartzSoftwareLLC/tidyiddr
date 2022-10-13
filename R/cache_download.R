@@ -31,7 +31,6 @@ cache_download <- function(url, ..., use_memory = TRUE, use_disk = TRUE, bust_ca
     }
     path <- file.path(cache_dir, paste0(memory, ".csv"))
     if (file.exists(path) & !bust_cache) {
-      print("Reading from disk cache")
       assign(memory, vroom::vroom(path))
     } else {
       download_data()
@@ -41,7 +40,6 @@ cache_download <- function(url, ..., use_memory = TRUE, use_disk = TRUE, bust_ca
   }
 
   if (!exists(memory)) {
-    print("Downloading Data")
     download_data()
   } else {
   }
