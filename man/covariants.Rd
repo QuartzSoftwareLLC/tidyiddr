@@ -4,18 +4,12 @@
 \alias{covariants}
 \title{covariants}
 \usage{
-covariants(use_memory = T, use_disk = T, bust_cache = F, ...)
+covariants(...)
 
-covariants(use_memory = T, use_disk = T, bust_cache = F, ...)
+covariants(...)
 }
 \arguments{
-\item{use_memory}{Whether to use memory caching.}
-
-\item{use_disk}{Whether to use disk caching.}
-
-\item{bust_cache}{Whether to bust (refresh) the cache.}
-
-\item{...}{arguments to forward to the cache_download function.}
+\item{...}{arguments to forward to the vroom::vroom function.}
 }
 \description{
 COVID19 Covariants by State
@@ -29,7 +23,11 @@ More information available at the \href{https://epi.quartzsoftware.com/datasets/
 \details{
 This function uses the cache_download function to download the data from the repository.
 
+Use use_memory, use_disk, and bust_cache have been deprecated
+
 This function uses the cache_download function to download the data from the repository.
+
+Use use_memory, use_disk, and bust_cache have been deprecated
 }
 \examples{
 data <- covariants()

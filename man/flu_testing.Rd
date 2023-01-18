@@ -4,16 +4,10 @@
 \alias{flu_testing}
 \title{flu_testing}
 \usage{
-flu_testing(use_memory = T, use_disk = T, bust_cache = F, ...)
+flu_testing(...)
 }
 \arguments{
-\item{use_memory}{Whether to use memory caching.}
-
-\item{use_disk}{Whether to use disk caching.}
-
-\item{bust_cache}{Whether to bust (refresh) the cache.}
-
-\item{...}{arguments to forward to the cache_download function.}
+\item{...}{arguments to forward to the vroom::vroom function.}
 }
 \description{
 Flu Testing
@@ -22,6 +16,8 @@ More information available at the \href{https://epi.quartzsoftware.com/datasets/
 }
 \details{
 This function uses the cache_download function to download the data from the repository.
+
+Use use_memory, use_disk, and bust_cache have been deprecated
 }
 \examples{
 data <- flu_testing()

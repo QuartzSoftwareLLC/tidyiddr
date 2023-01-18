@@ -1,25 +1,4 @@
 
-#' nervss
-#'
-#' NERVSS
-#' NERVSS respiratory pathogen testing information
-#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/nervss)
-#'
-#' This function uses the cache_download function to download the data from the repository.
-#' @md
-#' @examples
-#' data <- nervss()
-#'
-#' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-nervss <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
-  
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/nervss.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
-}
-
 #' covid.by.county
 #'
 #' COVID by County
@@ -27,18 +6,32 @@ nervss <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covid-by-county)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- covid.by.county()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-covid.by.county <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+covid.by.county <- function(...) {
   print(" covid.by.county is deprecated. Please use covid_by_county instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/covid-by-county.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/covid-by-county.csv", args , show_col_types = FALSE)))
+
 }
 
 #' outpatient.viral.surveillance
@@ -48,18 +41,32 @@ covid.by.county <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/outpatient-viral-surveillance)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- outpatient.viral.surveillance()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-outpatient.viral.surveillance <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+outpatient.viral.surveillance <- function(...) {
   print(" outpatient.viral.surveillance is deprecated. Please use outpatient_viral_surveillance instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.csv", args , show_col_types = FALSE)))
+
 }
 
 #' flu.testing
@@ -69,18 +76,32 @@ outpatient.viral.surveillance <- function(use_memory = T, use_disk = T, bust_cac
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flu-testing)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- flu.testing()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-flu.testing <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+flu.testing <- function(...) {
   print(" flu.testing is deprecated. Please use flu_testing instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu-testing.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/flu-testing.csv", args , show_col_types = FALSE)))
+
 }
 
 #' influenza.vaccine.effectiveness
@@ -90,18 +111,32 @@ flu.testing <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-vaccine-effectiveness)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- influenza.vaccine.effectiveness()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-influenza.vaccine.effectiveness <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+influenza.vaccine.effectiveness <- function(...) {
   print(" influenza.vaccine.effectiveness is deprecated. Please use influenza_vaccine_effectiveness instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-vaccine-effectiveness.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/influenza-vaccine-effectiveness.csv", args , show_col_types = FALSE)))
+
 }
 
 #' influenza.prevention
@@ -111,18 +146,32 @@ influenza.vaccine.effectiveness <- function(use_memory = T, use_disk = T, bust_c
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-prevention)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- influenza.prevention()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-influenza.prevention <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+influenza.prevention <- function(...) {
   print(" influenza.prevention is deprecated. Please use influenza_prevention instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-prevention.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/influenza-prevention.csv", args , show_col_types = FALSE)))
+
 }
 
 #' influenza.burden
@@ -132,18 +181,32 @@ influenza.prevention <- function(use_memory = T, use_disk = T, bust_cache = F, .
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-burden)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- influenza.burden()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-influenza.burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+influenza.burden <- function(...) {
   print(" influenza.burden is deprecated. Please use influenza_burden instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-burden.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/influenza-burden.csv", args , show_col_types = FALSE)))
+
 }
 
 #' test.burden
@@ -153,18 +216,32 @@ influenza.burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/test-burden)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- test.burden()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-test.burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+test.burden <- function(...) {
   print(" test.burden is deprecated. Please use test_burden instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/test-burden.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/test-burden.csv", args , show_col_types = FALSE)))
+
 }
 
 #' misc
@@ -174,18 +251,32 @@ test.burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/misc)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- misc()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+misc <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/misc.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/misc.csv", args , show_col_types = FALSE)))
+
 }
 
 #' flu
@@ -195,18 +286,32 @@ misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flu)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- flu()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+flu <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/flu.csv", args , show_col_types = FALSE)))
+
 }
 
 #' breakthrough
@@ -216,18 +321,32 @@ flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/breakthrough)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- breakthrough()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-breakthrough <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+breakthrough <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/breakthrough.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/breakthrough.csv", args , show_col_types = FALSE)))
+
 }
 
 #' covariants
@@ -237,18 +356,32 @@ breakthrough <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covariants)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- covariants()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-covariants <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+covariants <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/covariants.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/covariants.csv", args , show_col_types = FALSE)))
+
 }
 
 #' covariants.country
@@ -258,18 +391,32 @@ covariants <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covariants-country)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- covariants.country()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-covariants.country <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+covariants.country <- function(...) {
   print(" covariants.country is deprecated. Please use covariants_country instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/covariants-country.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/covariants-country.csv", args , show_col_types = FALSE)))
+
 }
 
 #' caserates.by.age
@@ -279,18 +426,32 @@ covariants.country <- function(use_memory = T, use_disk = T, bust_cache = F, ...
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/caserates-by-age)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- caserates.by.age()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-caserates.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+caserates.by.age <- function(...) {
   print(" caserates.by.age is deprecated. Please use caserates_by_age instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv", args , show_col_types = FALSE)))
+
 }
 
 #' deathcounts.by.age
@@ -300,18 +461,32 @@ caserates.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/deathcounts-by-age)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- deathcounts.by.age()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-deathcounts.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+deathcounts.by.age <- function(...) {
   print(" deathcounts.by.age is deprecated. Please use deathcounts_by_age instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/deathcounts-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/deathcounts-by-age.csv", args , show_col_types = FALSE)))
+
 }
 
 #' deathrates.by.age
@@ -321,18 +496,32 @@ deathcounts.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/deathrates-by-age)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- deathrates.by.age()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-deathrates.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+deathrates.by.age <- function(...) {
   print(" deathrates.by.age is deprecated. Please use deathrates_by_age instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/deathrates-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/deathrates-by-age.csv", args , show_col_types = FALSE)))
+
 }
 
 #' hospitalizations.by.age
@@ -342,18 +531,32 @@ deathrates.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...)
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/hospitalizations-by-age)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- hospitalizations.by.age()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-hospitalizations.by.age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+hospitalizations.by.age <- function(...) {
   print(" hospitalizations.by.age is deprecated. Please use hospitalizations_by_age instead")
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv", args , show_col_types = FALSE)))
+
 }
 
 #' flunet
@@ -363,39 +566,32 @@ hospitalizations.by.age <- function(use_memory = T, use_disk = T, bust_cache = F
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flunet)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- flunet()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-flunet <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+flunet <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
-}
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
 
-#' nervss
-#'
-#' NERVSS
-#' NERVSS respiratory pathogen testing information
-#' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/nervss)
-#'
-#' This function uses the cache_download function to download the data from the repository.
-#' @md
-#' @examples
-#' data <- nervss()
-#'
-#' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-nervss <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
-  
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/nervss.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", args , show_col_types = FALSE)))
+
 }
 
 #' covid_by_county
@@ -405,18 +601,32 @@ nervss <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covid-by-county)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- covid_by_county()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-covid_by_county <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+covid_by_county <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/covid-by-county.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/covid-by-county.csv", args , show_col_types = FALSE)))
+
 }
 
 #' outpatient_viral_surveillance
@@ -426,18 +636,32 @@ covid_by_county <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/outpatient-viral-surveillance)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- outpatient_viral_surveillance()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-outpatient_viral_surveillance <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+outpatient_viral_surveillance <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/outpatient-viral-surveillance.csv", args , show_col_types = FALSE)))
+
 }
 
 #' flu_testing
@@ -447,18 +671,32 @@ outpatient_viral_surveillance <- function(use_memory = T, use_disk = T, bust_cac
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flu-testing)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- flu_testing()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-flu_testing <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+flu_testing <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu-testing.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/flu-testing.csv", args , show_col_types = FALSE)))
+
 }
 
 #' influenza_vaccine_effectiveness
@@ -468,18 +706,32 @@ flu_testing <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-vaccine-effectiveness)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- influenza_vaccine_effectiveness()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-influenza_vaccine_effectiveness <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+influenza_vaccine_effectiveness <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-vaccine-effectiveness.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/influenza-vaccine-effectiveness.csv", args , show_col_types = FALSE)))
+
 }
 
 #' influenza_prevention
@@ -489,18 +741,32 @@ influenza_vaccine_effectiveness <- function(use_memory = T, use_disk = T, bust_c
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-prevention)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- influenza_prevention()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-influenza_prevention <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+influenza_prevention <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-prevention.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/influenza-prevention.csv", args , show_col_types = FALSE)))
+
 }
 
 #' influenza_burden
@@ -510,18 +776,32 @@ influenza_prevention <- function(use_memory = T, use_disk = T, bust_cache = F, .
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/influenza-burden)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- influenza_burden()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-influenza_burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+influenza_burden <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/influenza-burden.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/influenza-burden.csv", args , show_col_types = FALSE)))
+
 }
 
 #' test_burden
@@ -531,18 +811,32 @@ influenza_burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/test-burden)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- test_burden()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-test_burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+test_burden <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/test-burden.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/test-burden.csv", args , show_col_types = FALSE)))
+
 }
 
 #' misc
@@ -552,18 +846,32 @@ test_burden <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/misc)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- misc()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+misc <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/misc.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/misc.csv", args , show_col_types = FALSE)))
+
 }
 
 #' flu
@@ -573,18 +881,32 @@ misc <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flu)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- flu()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+flu <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/flu.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/flu.csv", args , show_col_types = FALSE)))
+
 }
 
 #' breakthrough
@@ -594,18 +916,32 @@ flu <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/breakthrough)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- breakthrough()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-breakthrough <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+breakthrough <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/breakthrough.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/breakthrough.csv", args , show_col_types = FALSE)))
+
 }
 
 #' covariants
@@ -615,18 +951,32 @@ breakthrough <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covariants)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- covariants()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-covariants <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+covariants <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/covariants.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/covariants.csv", args , show_col_types = FALSE)))
+
 }
 
 #' covariants_country
@@ -636,18 +986,32 @@ covariants <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/covariants-country)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- covariants_country()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-covariants_country <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+covariants_country <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/covariants-country.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/covariants-country.csv", args , show_col_types = FALSE)))
+
 }
 
 #' caserates_by_age
@@ -657,18 +1021,32 @@ covariants_country <- function(use_memory = T, use_disk = T, bust_cache = F, ...
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/caserates-by-age)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- caserates_by_age()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-caserates_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+caserates_by_age <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/caserates-by-age.csv", args , show_col_types = FALSE)))
+
 }
 
 #' deathcounts_by_age
@@ -678,18 +1056,32 @@ caserates_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) 
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/deathcounts-by-age)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- deathcounts_by_age()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-deathcounts_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+deathcounts_by_age <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/deathcounts-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/deathcounts-by-age.csv", args , show_col_types = FALSE)))
+
 }
 
 #' deathrates_by_age
@@ -699,18 +1091,32 @@ deathcounts_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/deathrates-by-age)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- deathrates_by_age()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-deathrates_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+deathrates_by_age <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/deathrates-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/deathrates-by-age.csv", args , show_col_types = FALSE)))
+
 }
 
 #' hospitalizations_by_age
@@ -720,18 +1126,32 @@ deathrates_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...)
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/hospitalizations-by-age)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- hospitalizations_by_age()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-hospitalizations_by_age <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+hospitalizations_by_age <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/hospitalizations-by-age.csv", args , show_col_types = FALSE)))
+
 }
 
 #' flunet
@@ -741,16 +1161,30 @@ hospitalizations_by_age <- function(use_memory = T, use_disk = T, bust_cache = F
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/flunet)
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- flunet()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-flunet <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+flunet <- function(...) {
   
-    cache_download("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c("https://s3.amazonaws.com/quartzdata/datasets/flunet.csv", args , show_col_types = FALSE)))
+
 }

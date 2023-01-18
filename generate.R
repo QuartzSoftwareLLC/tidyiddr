@@ -31,20 +31,34 @@ raw %>%
 #' More information available at the [Quartz Software Infection Disease Data Repository](https://epi.quartzsoftware.com/datasets/{{id}})
 #'
 #' This function uses the cache_download function to download the data from the repository.
+#' 
+#' Use use_memory, use_disk, and bust_cache have been deprecated
 #' @md
 #' @examples
 #' data <- {{ name }}()
 #'
 #' @export
-#' @param use_memory Whether to use memory caching.
-#' @param use_disk Whether to use disk caching.
-#' @param bust_cache Whether to bust (refresh) the cache.
-#' @param ... arguments to forward to the cache_download function.
-{{name}} <- function(use_memory = T, use_disk = T, bust_cache = F, ...) {
+#' @param ... arguments to forward to the vroom::vroom function.
+{{name}} <- function(...) {
   {{ifelse(grepl('\\\\.', name),
         paste('print(\"', name, 'is deprecated. Please use', gsub('\\\\.', '_', name), 'instead\")' ),
         '')}}
-    cache_download(\"{{link}}\", use_memory = use_memory, use_disk = use_disk, bust_cache = bust_cache, ...)
+  args <- c(...)
+  if(!is.null(args)) {
+  if(!is.na(args['use_memory'])) {
+    print('Use memory has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['use_disk'])) {
+    print('Use disk has been deprecated. Please use memoise for caching instead')
+  }
+  if(!is.na(args['bust_cache'])) {
+    print('Bust cache has been deprecated. The default is now not to use caching. Please use memoise for caching instead')
+  }
+  }
+  args <- args[!names(args) %in% c('use_memory', 'use_disk', 'bust_cache')]
+
+  do.call(vroom::vroom, as.list(c(\"{{link}}\", args , show_col_types = FALSE)))
+
 }
 ", .open = "{{", .close = "}}")
   ) %>%

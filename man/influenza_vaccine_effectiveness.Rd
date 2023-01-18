@@ -4,21 +4,10 @@
 \alias{influenza_vaccine_effectiveness}
 \title{influenza_vaccine_effectiveness}
 \usage{
-influenza_vaccine_effectiveness(
-  use_memory = T,
-  use_disk = T,
-  bust_cache = F,
-  ...
-)
+influenza_vaccine_effectiveness(...)
 }
 \arguments{
-\item{use_memory}{Whether to use memory caching.}
-
-\item{use_disk}{Whether to use disk caching.}
-
-\item{bust_cache}{Whether to bust (refresh) the cache.}
-
-\item{...}{arguments to forward to the cache_download function.}
+\item{...}{arguments to forward to the vroom::vroom function.}
 }
 \description{
 Influenza Vaccine Effectiveness
@@ -27,6 +16,8 @@ More information available at the \href{https://epi.quartzsoftware.com/datasets/
 }
 \details{
 This function uses the cache_download function to download the data from the repository.
+
+Use use_memory, use_disk, and bust_cache have been deprecated
 }
 \examples{
 data <- influenza_vaccine_effectiveness()
